@@ -194,7 +194,7 @@ class DBSCANTrainer(tk.Tk):
         # ttk.Button(extra_controls, text="Undo / Reset", command=self.reset).pack(anchor="w")
         # ttk.Label(extra_controls, text="Quiz questions:").pack(anchor="w")
         # ttk.Spinbox(extra_controls, from_=1, to=20, textvariable=self.quiz_question_count, width=5).pack(anchor="w", pady=(0, 6))
-        # 🆕 Add quiz question count entry
+        # Add quiz question count entry
         quiz_row = ttk.Frame(extra_controls); quiz_row.pack(anchor="w", pady=(0, 4))
         ttk.Label(quiz_row, text="Number of questions:").pack(side="left")
         ttk.Spinbox(quiz_row, from_=1, to=self.dataset_size.get(), textvariable=self.quiz_question_count, width=4).pack(side="left", padx=4)
@@ -441,7 +441,7 @@ class DBSCANTrainer(tk.Tk):
             self.history.clear()
             self.core_graph.clear()
 
-            # ✅ Reset quiz state
+            # Reset quiz state
             self.quiz_prompt_count = 0
             self.quiz_question_count.set(5)
 
@@ -737,3 +737,4 @@ class DBSCANTrainer(tk.Tk):
 # =============================================================================
 if __name__ == "__main__":
     DBSCANTrainer().mainloop()
+
